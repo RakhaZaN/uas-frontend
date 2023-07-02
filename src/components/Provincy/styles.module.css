@@ -1,0 +1,67 @@
+.provincy {
+  text-align: center;
+}
+
+.table_container {
+  width: 100%;
+  overflow: auto;
+  margin: 3rem auto;
+  max-height: 50vh;
+}
+
+.provincy__table {
+  margin: 0 auto;
+  width: max-content;
+  max-height: 50vh;
+}
+
+.provincy__table,
+th,
+td {
+  border: 1px solid var(--dark);
+  border-collapse: collapse;
+  border: none;
+}
+
+.provincy__table th {
+  color: var(--accent);
+  padding: 1rem 2rem;
+  background-color: var(--secondary);
+}
+
+.provincy__table td {
+  padding: 1rem 2rem;
+}
+
+.provincy__table tbody tr:nth-child(odd) {
+  background-color: var(--light);
+}
+
+.provincy__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 0.8rem;
+  list-style: circle;
+}
+
+.provincy__info_item {
+  list-style: none;
+  flex-basis: 40%;
+}
+
+.provincy__info_item span {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .table_container {
+    width: max-content;
+    max-height: 40vh;
+  }
+
+  .provincy__table {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,85 @@
+.covidForm {
+  background-color: var(--light);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.covidForm__ilustration img {
+  width: 100%;
+  margin-top: 3em;
+}
+
+.covidForm__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 480px;
+}
+
+.covidForm__input_group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.covidForm__label {
+  font-weight: 500;
+}
+
+.covidForm__input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgba(128, 128, 128, 0.3);
+  border-radius: 8px;
+  outline: none;
+  font-size: inherit;
+}
+.covidForm__input:focus {
+  border-color: var(--primary);
+}
+
+.covidForm__submitBtn {
+  color: white;
+  background-color: var(--primary);
+  padding: 12px 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+}
+.covidForm__submitBtn:hover {
+  background-color: var(--accent);
+}
+
+.covidForm__error {
+  font-size: 0.8rem;
+  color: #e85858;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .covidForm__ilustration {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .covidForm__ilustration img {
+    width: 90%;
+  }
+}

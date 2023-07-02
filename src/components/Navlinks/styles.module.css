@@ -1,0 +1,13 @@
+.navlink {
+  padding: 4px 12px;
+  color: inherit;
+}
+.navlink:hover {
+  color: var(--secondary);
+}
+
+.active {
+  background-color: var(--secondary);
+  color: var(--accent);
+  border-radius: 8px;
+}
