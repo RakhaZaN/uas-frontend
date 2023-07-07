@@ -11,7 +11,7 @@ const Provinsi = () => {
 
     useEffect(() => {
         dispatch(updateCovid(data))
-    })
+    }, [])
 
     return (
         <div>

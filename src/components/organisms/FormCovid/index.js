@@ -87,7 +87,7 @@ const FormCovid = () => {
                         </InputGroup>
                         <InputGroup inputs={inputs} setInputs={setInputs} errors={errors} pesanError='Pilih status yang tersedia!' label='Status' inputAs='select' name='status' value={inputs.status}>
                             <option value=''>--- Please Select ---</option>
-                            <option value='positif'>Positif</option>
+                            <option value='kasus'>Positif</option>
                             <option value='dirawat'>Dirawat</option>
                             <option value='sembuh'>Sembuh</option>
                             <option value='meninggal'>Meninggal</option>

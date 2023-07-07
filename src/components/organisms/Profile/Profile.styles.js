@@ -4,7 +4,7 @@ const StyledProfile = styled.div`
 img {
     width: 100%;
     height: 100%;
-    max-height: 50vh;
+    max-height: 80vh;
     border-top-left-radius: 12rem;
     border-bottom-right-radius: 12rem;
     object-fit: cover;
