@@ -1,31 +1,28 @@
-import { useState } from "react";
-import CovidForm from "../components/CovidForm";
-import Footer from "../components/Footer";
-import Global from "../components/Global";
-import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
-import Provincy from "../components/Provincy";
-import provinces from '../utils/constants/provinces'
-
-const Main = () => {
-  const [data, setData] = useState(provinces);
-
-  return (
-    <main>
-      <Hero />
-      <Global />
-      <Provincy data={data} />
-      <CovidForm data={data} setData={setData} />
-    </main>
-  );
-}
+import { useEffect, useState } from "react";
+import Hero from "../components/organisms/Hero";
+import GlobalSituationCards from "../components/organisms/GlobalSituationCards";
+import axios from "axios";
+import ENDPOINTS from "../utils/constants/endpoints";
+import ByRegion from "../components/organisms/GlobalSituationCards/ByRegion";
 
 const Home = () => {
+  const [data, setData] = useState([])
+
+  const getData = async () => {
+    const response = await axios.get(ENDPOINTS.GLOBAL_SITUATIONS)
+    setData(response.data)
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
+
   return (
     <>
-      <Navbar />
-      <Main />
-      <Footer />
+      <Hero />
+      <GlobalSituationCards data={data.global} last_update={data.last_update} />
+      <ByRegion data={data.regions} />
     </>
   );
 }

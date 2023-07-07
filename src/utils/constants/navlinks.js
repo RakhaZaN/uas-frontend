@@ -1,19 +1,23 @@
 const navlinks = [
     {
+        id: 'global',
         title: "Global",
-        link: "#global"
+        link: "/"
     },
     {
+        id: 'indonesia',
         title: "Indonesia",
-        link: "#indonesia"
+        link: "/indonesia"
     },
     {
+        id: 'provinsi',
         title: "Provinsi",
-        link: "#provinsi"
+        link: "/provinsi"
     },
     {
+        id: 'about',
         title: "About",
-        link: "#about"
+        link: "/about"
     },
 ]
 
