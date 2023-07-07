@@ -1,6 +1,10 @@
+import Profile from "../components/organisms/Profile"
+
 const About = () => {
     return (
-        <div>About</div>
+        <>
+            <Profile />
+        </>
     )
 }
 
