@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Hero from "../components/organisms/Hero";
-import GlobalSituationCards from "../components/organisms/GlobalSituationCards";
+import SituationCards from "../components/organisms/SituationCards";
 import axios from "axios";
 import ENDPOINTS from "../utils/constants/endpoints";
-import ByRegion from "../components/organisms/GlobalSituationCards/ByRegion";
+import ByRegion from "../components/organisms/SituationCards/ByRegion";
 
 const Home = () => {
   const [data, setData] = useState([])
@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <GlobalSituationCards data={data.global} last_update={data.last_update} />
+      <SituationCards title='Global' data={data.global} last_update={data.last_update} />
       <ByRegion data={data.regions} />
     </>
   );

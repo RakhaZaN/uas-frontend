@@ -5,6 +5,9 @@ import Navbar from "./components/organisms/Navbar";
 import Footer from "./components/organisms/Footer";
 import { Route, Routes } from "react-router-dom";
 import GlobalStyle from "./components/GlobalStyle";
+import Indonesia from "./pages/Indonesia";
+import Provinsi from "./pages/Provinsi";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -13,9 +16,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/indonesia" element={<h1>Indonesia</h1>} />
-        <Route path="/provinsi" element={<h1>Provinsi</h1>} />
-        <Route path="/about" element={<h1>About</h1>} />
+        <Route path="/indonesia" element={<Indonesia />} />
+        <Route path="/provinsi" element={<Provinsi />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </ThemeProvider>

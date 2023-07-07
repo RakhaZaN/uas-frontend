@@ -1,24 +1,26 @@
+import theme from "../../../../utils/constants/theme"
 import Card from "../../../atoms/Card"
+import SituationStatus from "../../../atoms/Container/SituationStatus"
 import Text from "../../../atoms/Text"
-import { StyledStatus } from "../../../organisms/GlobalSituationCards/ByRegion/ByRegion.styled.js"
 import { CiFlag1, CiHeart, CiMedicalMask } from "react-icons/ci"
 
 const Status = ({ title, total }) => {
     const highlight = title === 'confirmed' ? 'primary' : title === 'recovered' ? 'accent' : 'danger'
+    const color = theme.colors[highlight]
 
     const icon =
-        title === 'confirmed' ? <CiMedicalMask color={({ theme }) => theme.colors[highlight]} fontSize='2rem' /> :
-            title === 'recovered' ? <CiHeart color={({ theme }) => theme.colors[highlight]} fontSize='2rem' /> :
-                title === 'death' ? <CiFlag1 color={({ theme }) => theme.colors[highlight]} fontSize='2rem' /> : null
+        title === 'confirmed' ? <CiMedicalMask color={color} fontSize='2rem' /> :
+            title === 'recovered' ? <CiHeart color={color} fontSize='2rem' /> :
+                title === 'death' ? <CiFlag1 color={color} fontSize='2rem' /> : null
 
     return (
-        <StyledStatus>
+        <SituationStatus>
             <div>
                 <Text style={{ textTransform: 'capitalize' }}>{title}</Text>
                 <Text $weight='600' size='md' color={highlight}>{total.toLocaleString('id-ID')}</Text>
             </div>
             {icon}
-        </StyledStatus>
+        </SituationStatus>
     )
 }
 

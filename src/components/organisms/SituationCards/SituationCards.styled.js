@@ -1,14 +1,14 @@
 import { styled } from "styled-components";
 
-const StyledGlobalSituationCards = styled.div`
+const StyledSituationCards = styled.div`
 background-color: ${({ theme }) => theme.colors.light};
 `
 
 export const Cards = styled.div`
-display: flex;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
 justify-content: center;
 align-items: center;
-flex-wrap: wrap;
 gap: 2em;
 
 @media screen and (max-width: 768px) {
@@ -18,4 +18,4 @@ gap: 2em;
 }
 `
 
-export default StyledGlobalSituationCards
+export default StyledSituationCards

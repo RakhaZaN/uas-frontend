@@ -29,10 +29,6 @@ a {
     padding: 4px 12px;
     color: inherit;
     transition: all 300ms ease-in-out;
-    
-    &.active {
-        border-bottom: solid 1px ${({ theme }) => theme.colors.accent};
-    }
 
     &::after {
         display:block;
