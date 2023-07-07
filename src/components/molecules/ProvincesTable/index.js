@@ -6,11 +6,11 @@ const TBody = ({ body }) => (
         {body?.map((data, idx) => (
             <tr key={idx}>
                 <td>{idx + 1}</td>
-                <td>{data.name}</td>
-                <td>{data.numbers.confirmed.toLocaleString('id-ID')}</td>
-                <td>{data.numbers.recovered.toLocaleString('id-ID')}</td>
-                <td>{data.numbers.treatment.toLocaleString('id-ID')}</td>
-                <td>{data.numbers.death.toLocaleString('id-ID')}</td>
+                <td>{data.kota || data.name}</td>
+                <td>{data.kasus?.toLocaleString('id-ID') || data.numbers?.confirmed.toLocaleString('id-ID')}</td>
+                <td>{data.sembuh?.toLocaleString('id-ID') || data.numbers?.recovered.toLocaleString('id-ID')}</td>
+                <td>{data.dirawat?.toLocaleString('id-ID') || data.numbers?.treatment.toLocaleString('id-ID')}</td>
+                <td>{data.meninggal?.toLocaleString('id-ID') || data.numbers?.death.toLocaleString('id-ID')}</td>
             </tr>
         ))}
     </tbody>

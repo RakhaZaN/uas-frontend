@@ -50,7 +50,14 @@ flex-direction: ${() => direction || 'row'};
     }
 }
 `}
+`
 
+export const Side = styled.div`
+@media screen and (min-width: 768px) {
+    flex-grow: ${({ $growMd }) => $growMd || 0};
+    flex-shrink: ${({ $shrinkMd }) => $shrinkMd || 0};
+    flex-basis: ${({ $basisMd }) => $basisMd || 'auto'};
+}
 `
 
 export default Container
